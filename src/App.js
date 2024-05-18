@@ -29,7 +29,7 @@ function App() {
             <Routes>
               <Route path="/" elemnt={<Dashboard />} />
               <Route path="/team" elemnt={<Team />} />
-              <Route path="/contacts" elemnt={<Contacts />} />
+              {/* <Route path="/contacts" elemnt={<Contacts />} />
               <Route path="/invoices" elemnt={<Invoices />} />
               <Route path="/form" elemnt={<Form />} />
               <Route path="/bar" elemnt={<Bar />} />
@@ -37,7 +37,7 @@ function App() {
               <Route path="/line" elemnt={<Line />} />
               <Route path="/faq" elemnt={<FAQ />} />
               <Route path="/geography" elemnt={<Geography />} />
-              <Route path="/calendar" elemnt={<Calendar />} />
+              <Route path="/calendar" elemnt={<Calendar />} /> */}
             </Routes>
           </main>
         </div>
