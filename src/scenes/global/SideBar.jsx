@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Menu, MenuItem, ProSidebar } from "react-pro-sidebar";
+import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 
-// import "react-pro-sidebar/dist/css/styles.css";
+import "react-pro-sidebar/dist/css/styles.css";
 
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "@mui/material";
@@ -30,57 +30,80 @@ function SideBar() {
     <Box
       sx={{
         "& .pro-sidebar-inner": {
-          background: `&{colors.primary[400]}`,
+          background: `${colors.primary[400]} !important`,
         },
         "& .pro-icon-wrapper": {
-          backgroundColor: "transparent",
+          backgroundColor: "transparent !important",
         },
         "& .pro-inner-item": {
-          padding: "5px 35px 5px 20px",
+          padding: "5px 35px 5px 20px !important",
         },
-        "& .pro-menu-item-hover": {
-          color: "#868dfb",
+        "& .pro-inner-item:hover": {
+          color: "#868dfb !important",
         },
         "& .pro-menu-item.active": {
-          color: "#6870fa",
+          color: "#6870fa !important",
         },
       }}
     >
-      <Menu>
-        <MenuItem></MenuItem>
-
-        {!isCollapsed && (
-          <Box
-            mb="25px"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
+      <ProSidebar collapsed={isCollapsed}>
+        <Menu iconShape="square">
+          {/* LOGO AND MENU ICON */}
+          <MenuItem
+            onClick={() => setIsCollapsed(!isCollapsed)}
+            icon={isCollapsed ? <MenuOutlined /> : undefined}
+            style={{
+              margin: "10px 0 20px 0",
+              color: colors.grey[100],
+            }}
           >
-            <Box>
-              <img
-                alt="profile-user"
-                width="100px"
-                height="100px"
-                src={`../../assets/user.jpg`}
-                style={{ cursor: "pointer", borderRadius: "50%" }}
-              />
-            </Box>
-            <Box textAlign="center">
-              <Typography
-                variant="h2"
-                color={colors.grey[100]}
-                fontWeight="bold"
-                sx={{ m: "10px 0 0 0" }}
+            {!isCollapsed && (
+              <Box
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
+                ml="15px"
               >
-                trCVZ
-              </Typography>
-              <Typography variant="h5" color={colors.greenAccent[500]}>
-                Admin
-              </Typography>
+                <Typography variant="h3" color={colors.grey[100]}>
+                  ADMINIS
+                </Typography>
+                <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
+                  <MenuOutlined />
+                </IconButton>
+              </Box>
+            )}
+          </MenuItem>
+
+          {/* User */}
+          {!isCollapsed && (
+            <Box mb="25px">
+              <Box display="flex" justifyContent="center" alignItems="center">
+                <img
+                  alt="profile-user"
+                  width="100px"
+                  height="100px"
+                  src={`../../assets/user.jpg`}
+                  style={{ cursor: "pointer", borderRadius: "50%" }}
+                />
+              </Box>
+
+              <Box textAlign="center">
+                <Typography
+                  variant="h2"
+                  color={colors.grey[100]}
+                  fontWeight="bold"
+                  sx={{ m: "10px 0 0 0" }}
+                >
+                  trCVZ
+                </Typography>
+                <Typography variant="h5" color={colors.greenAccent[500]}>
+                  Admin
+                </Typography>
+              </Box>
             </Box>
-          </Box>
-        )}
-      </Menu>
+          )}
+        </Menu>
+      </ProSidebar>
     </Box>
   );
 }
