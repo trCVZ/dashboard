@@ -11,18 +11,18 @@ const Team = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const columns = [
-    { field: "id", headerName: "ID", headerClassName: "headerColumns" },
+    { field: "id", headerName: "ID" },
     {
       field: "name",
       headerName: "Name",
-      headerClassName: "headerColumns",
+
       flex: 1,
       cellClassName: "name-column--cell",
     },
     {
       field: "age",
       headerName: "Age",
-      headerClassName: "headerColumns",
+
       type: "number",
       headerAlign: "left",
       align: "left",
@@ -30,19 +30,19 @@ const Team = () => {
     {
       field: "phone",
       headerName: "Phone Number",
-      headerClassName: "headerColumns",
+
       flex: 1,
     },
     {
       field: "email",
       headerName: "Email",
-      headerClassName: "headerColumns",
+
       flex: 1,
     },
     {
       field: "accessLevel",
       headerName: "Access Level",
-      headerClassName: "headerColumns",
+
       flex: 1,
       renderCell: ({ row: { access } }) => {
         return (
@@ -83,22 +83,19 @@ const Team = () => {
           "& .MuiDataGrid-root": {
             border: "none",
           },
-          "& .MuiDataGrid-cell": {
-            borderBottom: "none",
-          },
           "& .name-column--cell": {
-            color: colors.greenAccent[300],
+            color: `${colors.greenAccent[300]} !important`,
           },
-          "& .headerColumns": {
-            backgroundColor: colors.blueAccent[700],
+          "& .css-1essi2g-MuiDataGrid-columnHeaderRow": {
+            backgroundColor: `${colors.blueAccent[700]} !important`,
             borderBottom: "none",
           },
           "& .MuiDataGrid-virtualScroller": {
             backgroundColor: colors.primary[400],
           },
           "& .MuiDataGrid-footerContainer": {
-            borderTop: "none",
             backgroundColor: colors.blueAccent[700],
+            borderTop: "none",
           },
           "& .MuiCheckbox-root": {
             color: `${colors.greenAccent[200]} !important`,

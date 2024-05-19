@@ -6,7 +6,7 @@ import SideBar from "./scenes/global/SideBar";
 import Dashboard from "./scenes/dashboard";
 import Team from "./scenes/team";
 // import Invoices from "./scenes/invoices";
-// import Contacts from "./scenes/contacts";
+import Contacts from "./scenes/contacts";
 // import Bar from "./scenes/bar";
 // import Form from "./scenes/form";
 // import Line from "./scenes/line";
@@ -29,15 +29,15 @@ function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/team" element={<Team />} />
-              {/* <Route path="/contacts" elemnt={<Contacts />} />
-              <Route path="/invoices" elemnt={<Invoices />} />
-              <Route path="/form" elemnt={<Form />} />
-              <Route path="/bar" elemnt={<Bar />} />
-              <Route path="/pie" elemnt={<Pie />} />
-              <Route path="/line" elemnt={<Line />} />
-              <Route path="/faq" elemnt={<FAQ />} />
-              <Route path="/geography" elemnt={<Geography />} />
-              <Route path="/calendar" elemnt={<Calendar />} /> */}
+              <Route path="/contacts" element={<Contacts />} />
+              {/* <Route path="/invoices" element={<Invoices />} />
+              <Route path="/form" element={<Form />} />
+              <Route path="/bar" element={<Bar />} />
+              <Route path="/pie" element={<Pie />} />
+              <Route path="/line" element={<Line />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/geography" element={<Geography />} />
+              <Route path="/calendar" element={<Calendar />} /> */}
             </Routes>
           </main>
         </div>
