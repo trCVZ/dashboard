@@ -1,6 +1,6 @@
 # Dashboard (*unfinished*)
 
-This project is a reproduction of the dashboard demonstrated in the video by [EdRoh](https://youtu.be/wYpCWwD1oz0).
+This project is a reproduction of the dashboard demonstrated in this video by [EdRoh](https://youtu.be/wYpCWwD1oz0).
 This project has greatly helped me to become more familiar with React, MUI, and other libraries.
 
 ## Installation
