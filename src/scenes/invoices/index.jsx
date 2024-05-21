@@ -64,7 +64,7 @@ const Invoices = () => {
           "& .name-column--cell": {
             color: colors.greenAccent[300],
           },
-          "& .css-1essi2g-MuiDataGrid-columnHeaderRow": {
+          "& .css-yrdy0g-MuiDataGrid-columnHeaderRow": {
             backgroundColor: `${colors.blueAccent[700]} !important`,
             borderBottom: "none !important",
           },
